@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Employee</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="stylesheets/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <a href="/employees">Employees List</a>
+            <h1>Employee Data</h1>
+                <table>
+                    <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td>:</td>
+                                <td><%= employee.name %></td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>:</td>
+                                <td><%= employee.address %></td>
+                            </tr>
+                            <tr>
+                                <td>Position</td>
+                                <td>:</td>
+                                <td><%= employee.position %></td>
+                            </tr>
+                            <tr>
+                                <td>Salary</td>
+                                <td>:</td>
+                                <td>$<%= employee.salary %>/years</td>
+                            </tr>
+                    </tbody>
+                </table>
+                <h3><a href="/employees/edit/<%= employee._id %>">Edit</a></h3>
+                <form action="/employees/delete/<% employee._id %>" method="post">
+                    <button type="submit" id="delete-data">Delete</button>
+                </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Employee</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="stylesheets/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Employee Data</h1>
+            <a href="/employees">Employees List</a>
+
+            <form action="/employees/save" method="post">
+                <label>Name </label>
+                <input type="text" name="name" value="<%= employee.name %>"/><br>
+                <label>Address </label>
+                <textarea name="address"><%= employee.address %></textarea><br>
+                <label>Position </label>
+                <input type="text" name="position" value="<%= employee.position %>"/><br>
+                <label>Salary </label>
+                <input type="number" name="salary" value="<%= employee.salary %>"/><br>
+                <input type="submit" name="submit" value="Submit"/>
+            </form>
+        </div>
+    </body>
+</html>
